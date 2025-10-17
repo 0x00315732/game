@@ -132,5 +132,3 @@ h1 {
     transition: background-color 0.3s, transform 0.1s;
     box-shadow: 0 4px #ccac00; /* Эффект 3D */
 }
-
-.option-button:hover {
