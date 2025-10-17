@@ -44,7 +44,7 @@ const story = {
     },
     // Сценарии с кашей
     papaBear: {
-        text: "Papa Bear's porridge was **too hot**! Goldilocks burned her tongue. What should she do next?",
+        text: "Papa Bear's porridge was too hot! Goldilocks burned her tongue. What should she do next?",
         image: "kitchen.jpg",
         options: [
             { text: "Try Mama Bear's porridge", nextScene: "mamaBear", isError: true },
@@ -60,7 +60,7 @@ const story = {
         ]
     },
     babyBear: {
-        text: "Baby Bear's porridge was **just right**! Goldilocks ate it all up. She felt a little guilty, but now she is full. Now she needs to decide what to do next.",
+        text: "Baby Bear's porridge was just right! Goldilocks ate it all up. She felt a little guilty, but now she is full. Now she needs to decide what to do next.",
         image: "kitchen.jpg",
         options: [
             { text: "Go into the parlor to sit down", nextScene: "chairs", isError: false },
@@ -79,7 +79,7 @@ const story = {
         ]
     },
     papaChair: {
-        text: "Papa Bear's chair was **too hard** and uncomfortable! Goldilocks quickly stood up. What now?",
+        text: "Papa Bear's chair was too hard and uncomfortable! Goldilocks quickly stood up. What now?",
         image: "parlor.jpg",
         options: [
             { text: "Try Mama Bear's chair", nextScene: "mamaChair", isError: true },
@@ -87,7 +87,7 @@ const story = {
         ]
     },
     mamaChair: {
-        text: "Mama Bear's chair was **too soft** and bouncy! Goldilocks nearly fell over. What now?",
+        text: "Mama Bear's chair was too soft and bouncy! Goldilocks nearly fell over. What now?",
         image: "parlor.jpg",
         options: [
             { text: "Try Papa Bear's chair", nextScene: "papaChair", isError: true },
@@ -95,7 +95,7 @@ const story = {
         ]
     },
     babyChair: {
-        text: "Baby Bear's chair was **just right**! But alas, Goldilocks sat on it so hard that **it broke into pieces**! She is very upset and tired. What should she do?",
+        text: "Baby Bear's chair was just right! But alas, Goldilocks sat on it so hard that it broke into pieces! She is very upset and tired. What should she do?",
         image: "parlor.jpg",
         options: [
             { text: "Go upstairs to the bedrooms", nextScene: "beds", isError: true },
@@ -114,7 +114,7 @@ const story = {
         ]
     },
     papaBed: {
-        text: "Papa Bear's bed was **too hard**! It felt like sleeping on a log. Goldilocks can't sleep here. What's next?",
+        text: "Papa Bear's bed was too hard! It felt like sleeping on a log. Goldilocks can't sleep here. What's next?",
         image: "bedroom.jpg",
         options: [
             { text: "Try Mama Bear's bed", nextScene: "mamaBed", isError: true },
@@ -122,7 +122,7 @@ const story = {
         ]
     },
     mamaBed: {
-        text: "Mama Bear's bed was **too soft** and sinking! Goldilocks felt like she was drowning in feathers. What's next?",
+        text: "Mama Bear's bed was too soft and sinking! Goldilocks felt like she was drowning in feathers. What's next?",
         image: "bedroom.jpg",
         options: [
             { text: "Try Papa Bear's bed", nextScene: "papaBed", isError: true },
@@ -130,7 +130,7 @@ const story = {
         ]
     },
     babyBed: {
-        text: "Baby Bear's bed was **just right**! Goldilocks immediately fell fast asleep... Suddenly, she hears a noise! The Bears are home!",
+        text: "Baby Bear's bed was just right! Goldilocks immediately fell fast asleep... Suddenly, she hears a noise! The Bears are home!",
         image: "bedroom.jpg",
         options: [
             { text: "Wake up and run away!", nextScene: "end_run", isError: false }, 
@@ -140,22 +140,22 @@ const story = {
     
     // КОНЕЧНЫЕ СЦЕНЫ (Снаружи или в пути)
     end_run: {
-        text: "Goldilocks jumps out of bed and runs down the stairs, straight out the door, never to return. **She learned her lesson: curiosity should respect boundaries!**",
+        text: "Goldilocks jumps out of bed and runs down the stairs, straight out the door, never to return. She learned her lesson: curiosity should respect boundaries!",
         image: "forest.jpg", // Возвращаемся в лес
         options: []
     },
     end_caught: {
-        text: "Goldilocks tries to pretend to sleep, but Papa Bear's gruff voice scares her! She jumps up, runs out the door, and never looks back. **She's sorry for using the Bears' things without asking.**",
+        text: "Goldilocks tries to pretend to sleep, but Papa Bear's gruff voice scares her! She jumps up, runs out the door, and never looks back. She's sorry for using the Bears' things without asking.",
         image: "forest.jpg",
         options: []
     },
     end_broken: {
-        text: "Goldilocks ran out of the house, feeling terrible for breaking the chair. **She learned a hard lesson about respecting other people's property.**",
+        text: "Goldilocks ran out of the house, feeling terrible for breaking the chair. She learned a hard lesson about respecting other people's property.",
         image: "forest.jpg",
         options: []
     },
     end_exit: {
-        text: "Goldilocks realized her mistake and hurried away. **Moral learned.**",
+        text: "Goldilocks realized her mistake and hurried away. Moral learned.",
         image: "forest.jpg",
         options: [] 
     }
@@ -173,7 +173,7 @@ function loadScene(sceneKey) {
 
     // Добавляем финальный счет ошибок
     if (sceneKey.startsWith('end') || sceneKey === 'babyBed') {
-        sceneText += ` (Total Errors: **${errorCount}**). (The End.)`;
+        sceneText += ` (Total Errors: ${errorCount}). (The End.)`;
     }
 
     storyTextElement.innerHTML = sceneText; 
